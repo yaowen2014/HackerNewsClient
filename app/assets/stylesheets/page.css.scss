@@ -33,6 +33,11 @@ body {
     opacity: 0;
     @include perspective(1300px);
 
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
     &.active {
         @include transform-style(preserve-3d);
         @include transform(translateZ(50px) translateY(50px) rotateX(-90deg));
