@@ -3,12 +3,35 @@ body {
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 420px) {
+    .stories-list-item {
+        .score-info-wrap,
+        .create-info-wrap {
+            display: block;
+        }
+
+        .score-info-wrap {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 421px) {
+    .stories-list-item {
+        .score-info-wrap,
+        .create-info-wrap {
+            display: inline-block;
+        }
+    }
+}
+
 .stories-list-item {
-    padding: 11px 65px 11px 15px;
+    padding: 11px 15px 11px 15px;
     margin-bottom: 10px;
     .title {
         font-size: 16px;
         margin-bottom: 10px;
+        line-height: 1.5;
     }
 
     .info-line {
