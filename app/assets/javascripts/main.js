@@ -5,9 +5,18 @@
             needInit: true
         });
 
+        this.newStoriesList = new App.ViewModels.List(App.ViewModels.Story, "newstories", {
+            needInit: true
+        });
+
+        this.tabsList = new App.ViewModels.TabsList([
+            new App.ViewModels.TabButton("Top", self.topStoriesList),
+            new App.ViewModels.TabButton("New", self.newStoriesList)
+        ]);
+
         $(window).scroll(function(){
             if (window.scrollY > document.body.clientHeight - window.innerHeight - 50) {
-                self.topStoriesList.loadMore();
+                self.tabsList.activeButton().shownComponent.loadMore();
             }
         });
     }

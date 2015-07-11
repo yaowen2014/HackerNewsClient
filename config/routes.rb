@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
 
   get 'index', to: "home#index"
+  get 'specs', to: "spec_runner#index"
 end

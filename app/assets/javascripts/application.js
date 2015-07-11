@@ -17,6 +17,11 @@
 //= require moment.min.js
 
 //= require init.js
+//= require utils.js
+
+//= require_tree ./mixins
+
 //= require viewmodels/list.js
 //= require viewmodels/story.js
+//= require viewmodels/tabs_list.js
 //= require main.js

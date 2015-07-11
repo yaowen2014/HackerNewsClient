@@ -2,6 +2,8 @@
     App.ViewModels.List = function(listItemVmKlass, restfulPath, options){
         var self = this;
 
+        this.visible = ko.observable(false);
+
         this.loadedPageNum = ko.observable(0);
 
         this.elements = ko.observableArray();

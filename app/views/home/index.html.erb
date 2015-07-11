@@ -1,5 +1,10 @@
-<!-- ko with: topStoriesList -->
-<ul class="stories-list" data-bind="foreach: elements">
+<div class="tabs-list-wrap">
+  <ul class="tabs-list" data-bind="foreach: tabsList.tabButtons">
+    <li class="tab-btn" data-bind="text: buttonText, click: clickTab"></li>
+  </ul>
+</div>
+
+<script id="story-item-template" type="text/html">
   <li class="stories-list-item" data-bind="css: {active: loaded}, click: gotoPost">
     <h3 class="title" data-bind="text: title"></h3>
     <div class="info-line">
@@ -10,9 +15,20 @@
         <span class="create-info" data-bind="text: createInfoText"></span>
       </div>
     </div>
-
   </li>
+</script>
 
+<!-- ko with: topStoriesList -->
+<ul class="top-stories-list" data-bind="foreach: elements, visible: visible">
+  <!-- ko template: {name: 'story-item-template', data: $data} -->
+  <!-- /ko -->
+</ul>
+<!-- /ko -->
+
+<!-- ko with: newStoriesList -->
+<ul class="new-stories-list" data-bind="foreach: elements, visible: visible">
+  <!-- ko template: {name: 'story-item-template', data: $data} -->
+  <!-- /ko -->
 </ul>
 <div class="loading-hint" data-bind="visible:loading">
   <%= render "/home/spin_loading" %>
