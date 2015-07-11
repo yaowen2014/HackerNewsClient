@@ -37,5 +37,9 @@
         this.createInfoText = ko.computed(function(){
             return "submitted " + moment(self.createTime()).fromNow() + " by " + self.creator();
         });
+
+        this.gotoPost = function(){
+            window.location = self.url();
+        }
     }
 }).call(window);

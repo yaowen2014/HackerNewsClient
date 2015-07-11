@@ -1,6 +1,6 @@
 <!-- ko with: topStoriesList -->
 <ul class="stories-list" data-bind="foreach: elements">
-  <li class="stories-list-item" data-bind="css: {active: loaded}">
+  <li class="stories-list-item" data-bind="css: {active: loaded}, click: gotoPost">
     <h3 class="title" data-bind="text: title"></h3>
     <div class="info-line">
       <div class="score-info-wrap">
