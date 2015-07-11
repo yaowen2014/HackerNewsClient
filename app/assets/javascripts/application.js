@@ -11,5 +11,11 @@
 // about supported directives.
 //
 
-//= require jquery.2.1.1.min.js
-//= require knockback-full-stack.min.js
+//= require jquery-2.1.1.min.js
+//= require knockback-full-stack.js
+//= require firebase.js
+
+//= require init.js
+//= require viewmodels/list.js
+//= require viewmodels/story.js
+//= require main.js
