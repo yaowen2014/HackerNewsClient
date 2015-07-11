@@ -1,3 +1,4 @@
+@import "bourbon";
 
 body {
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -28,6 +29,15 @@ body {
 .stories-list-item {
     padding: 11px 15px 11px 15px;
     margin-bottom: 10px;
+    opacity: 0;
+    @include perspective(1300px);
+
+    &.active {
+        @include transform-style(preserve-3d);
+        @include transform(translateZ(400px) translateY(300px) rotateX(-90deg));
+        @include animation(fallPerspective .8s ease-in-out forwards);
+    }
+    
     .title {
         font-size: 16px;
         margin-bottom: 10px;
@@ -48,4 +58,9 @@ body {
             color: rgb(187, 187, 187);
         }
     }
+}
+
+@include keyframes(fallPerspective) {
+    0% { }
+    100% { @include transform(translateZ(0px) translateY(0px) rotateX(0deg)); opacity: 1; }
 }

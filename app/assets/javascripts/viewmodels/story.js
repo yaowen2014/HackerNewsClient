@@ -12,6 +12,8 @@
 
         this.creator = ko.observable(null);
 
+        this.loaded = ko.observable(false);
+
         globalFirebaseRef.child('item/' + id).once("value", function(snapShot){
             var storyObj = snapShot.val();
 
@@ -24,6 +26,8 @@
             self.createTime(storyObj.time * 1000);
 
             self.creator(storyObj.by);
+
+            self.loaded(true);
         });
 
         this.scoreText = ko.computed(function(){

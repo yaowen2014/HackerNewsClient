@@ -11,5 +11,5 @@
  * file per style scope.
  *
  *= require ./reset.css.scss
- *= require ./page.css.scss
+  *= require ./page.css.scss
  */
