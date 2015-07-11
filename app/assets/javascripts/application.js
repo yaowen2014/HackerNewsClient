@@ -14,6 +14,7 @@
 //= require jquery-2.1.1.min.js
 //= require knockback-full-stack.js
 //= require firebase.js
+//= require moment.min.js
 
 //= require init.js
 //= require viewmodels/list.js

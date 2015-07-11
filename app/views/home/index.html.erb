@@ -1,5 +1,9 @@
 <ul class="stories-list" data-bind="foreach: topStoriesList.elements">
   <li class="stories-list-item">
     <div class="title" data-bind="text: title"></div>
+    <div class="info-line">
+      <span data-bind="text: scoreText"></span>
+      <span data-bind="text: createInfoText"></span>
+    </div>
   </li>
 </ul>
