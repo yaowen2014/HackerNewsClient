@@ -12,10 +12,12 @@
 
         this.loading = ko.observable(false);
 
+        this.mayHasMore = ko.observable(true);
+
         var unlockLoadingTimeout = null;
 
         this.loadMore = function(){
-            if(self.loading()) {
+            if(self.loading() || !self.mayHasMore()) {
                 return;
             }
             unlockLoadingTimeout && clearTimeout(unlockLoadingTimeout);
@@ -25,6 +27,9 @@
                 childIndex++) {
                 globalFirebaseRef.child(restfulPath).child(childIndex).once('value', function(snapShot) {
                     var itemId = snapShot.val();
+                    if(itemId == null) {
+                        self.mayHasMore(false);
+                    }
                     self.elements.push(new listItemVmKlass(itemId));
                 });
             }

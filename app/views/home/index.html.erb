@@ -1,4 +1,5 @@
-<ul class="stories-list" data-bind="foreach: topStoriesList.elements">
+<!-- ko with: topStoriesList -->
+<ul class="stories-list" data-bind="foreach: elements">
   <li class="stories-list-item" data-bind="css: {active: loaded}">
     <h3 class="title" data-bind="text: title"></h3>
     <div class="info-line">
@@ -9,5 +10,11 @@
         <span class="create-info" data-bind="text: createInfoText"></span>
       </div>
     </div>
+
   </li>
+
 </ul>
+<div class="loading-hint" data-bind="visible:loading">
+  <%= render "/home/spin_loading" %>
+</div>
+<!-- /ko -->
