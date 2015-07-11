@@ -11,4 +11,5 @@
 // about supported directives.
 //
 
-//= require_tree .
+//= require jquery.2.1.1.min.js
+//= require knockback-full-stack.min.js
