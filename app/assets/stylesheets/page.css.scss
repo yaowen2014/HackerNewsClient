@@ -27,6 +27,27 @@ body {
     }
 }
 
+.tabs-list {
+    text-align: center;
+    box-sizing: border-box;
+    height: 30px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    .tab-btn {
+        display: inline-block;
+        padding: 7px 8px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        &.active {
+            border-bottom: 1px solid black;
+        }
+    }
+
+}
+
 .stories-list-item {
     padding: 11px 15px 11px 15px;
     margin-bottom: 10px;
