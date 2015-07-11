@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.stories-list-item {
+    padding: 11px 65px 11px 15px;
+    margin-bottom: 10px;
+    .title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .info-line {
+        font-size: 12px;
+
+        .score-info {
+            border-radius: 100px;
+            padding: 2px 9px 3px;
+            background-color: rgba(0, 0, 0, 0.15);
+            margin-right: 10px;
+        }
+
+        .create-info {
+            color: rgb(187, 187, 187);
+        }
+    }
+}
