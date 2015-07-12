@@ -30,7 +30,7 @@
         ]);
 
         $(window).scroll(function(){
-            if (window.scrollY > document.body.clientHeight - window.innerHeight - 50) {
+            if ($(window).scrollTop() > $(document).outerHeight() - window.innerHeight - 50) {
                 self.tabsList.activeButton().shownComponent.loadMore();
             }
         });
