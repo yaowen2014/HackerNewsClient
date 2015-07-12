@@ -1,0 +1,9 @@
+<div class="stories-list-wrap" data-bind="visible: visible" style="display: none">
+  <ul class="stories-list" data-bind="foreach: elements">
+    <!-- ko template: {name: 'story-item-template', data: $data} -->
+    <!-- /ko -->
+  </ul>
+  <div class="loading-hint" data-bind="visible:loading">
+    <%= render "/home/spin_loading" %>
+  </div>
+</div>

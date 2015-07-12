@@ -21,7 +21,11 @@
 
             self.score(storyObj.score);
 
-            self.url(storyObj.url);
+            if(storyObj.url && storyObj.url.length > 0) {
+                self.url(storyObj.url);
+            } else {
+                self.url("https://news.ycombinator.com/item?id=" + storyObj.id);
+            }
 
             self.createTime(storyObj.time * 1000);
 

@@ -19,18 +19,21 @@
 </script>
 
 <!-- ko with: topStoriesList -->
-<ul class="top-stories-list" data-bind="foreach: elements, visible: visible">
-  <!-- ko template: {name: 'story-item-template', data: $data} -->
-  <!-- /ko -->
-</ul>
+<%= render "/home/list.html.erb" %>
 <!-- /ko -->
 
 <!-- ko with: newStoriesList -->
-<ul class="new-stories-list" data-bind="foreach: elements, visible: visible">
-  <!-- ko template: {name: 'story-item-template', data: $data} -->
-  <!-- /ko -->
-</ul>
-<div class="loading-hint" data-bind="visible:loading">
-  <%= render "/home/spin_loading" %>
-</div>
+<%= render "/home/list.html.erb" %>
+<!-- /ko -->
+
+<!-- ko with: showStoriesList -->
+<%= render "/home/list.html.erb" %>
+<!-- /ko -->
+
+<!-- ko with: askStoriesList -->
+<%= render "/home/list.html.erb" %>
+<!-- /ko -->
+
+<!-- ko with: jobStoriesList -->
+<%= render "/home/list.html.erb" %>
 <!-- /ko -->

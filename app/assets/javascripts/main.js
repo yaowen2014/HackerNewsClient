@@ -9,9 +9,24 @@
             needInit: true
         });
 
+        this.showStoriesList = new App.ViewModels.List(App.ViewModels.Story, "showstories", {
+            needInit: true
+        });
+
+        this.askStoriesList = new App.ViewModels.List(App.ViewModels.Story, "askstories", {
+            needInit: true
+        });
+
+        this.jobStoriesList = new App.ViewModels.List(App.ViewModels.Story, "jobstories", {
+            needInit: true
+        });
+
         this.tabsList = new App.ViewModels.TabsList([
             new App.ViewModels.TabButton("Top", self.topStoriesList),
-            new App.ViewModels.TabButton("New", self.newStoriesList)
+            new App.ViewModels.TabButton("New", self.newStoriesList),
+            new App.ViewModels.TabButton("Show", self.showStoriesList),
+            new App.ViewModels.TabButton("Ask", self.askStoriesList),
+            new App.ViewModels.TabButton("Job", self.jobStoriesList)
         ]);
 
         $(window).scroll(function(){
