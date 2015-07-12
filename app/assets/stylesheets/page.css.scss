@@ -27,6 +27,14 @@ body {
     }
 }
 
+.tabs-list-wrap {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
 .tabs-list {
     text-align: center;
     box-sizing: border-box;
@@ -45,7 +53,10 @@ body {
             border-bottom: 1px solid black;
         }
     }
+}
 
+.main-wrap {
+    padding-top: 30px;
 }
 
 .stories-list-item {
